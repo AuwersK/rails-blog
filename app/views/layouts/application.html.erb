@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+
+    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'https://unpkg.com/htmx.org@1.9.6',  integrity: 'sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni', crossorigin: 'anonymous' %>
+    <%= javascript_include_tag 'https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js', defer: true %>
+  </head>
+
+  <body hx-boost="true">
+    <%= yield %>
+  </body>
+</html>
